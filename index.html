@@ -12,10 +12,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <!-- Your custom styles (if any) -->
     <style>
         body {
-            background-color: #1a1a1a!important;
+            background: linear-gradient(109.6deg, rgb(6, 2, 2) 32.4%, rgb(137, 30, 47) 98.8%);
             color: white!important;
             
             font-family: "Work Sans", sans-serif;
@@ -23,21 +24,41 @@
             font-weight: 400;
             font-style: normal;
         }
-        header {
-            background-color: #1a1a1a!important;
-        }
         .logo-title{
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: white!important;
         }
         .logo-title-last{
-            color: #f4c700!important;
+            color: #b10a24!important;
+        }
+        .logo-title-last.imp{
+            border-bottom: 2px solid white;
+        }
+        .hero-title {
+          font-family: "Work Sans", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 800;
+          font-size: 3rem!important;
+          font-style: normal;
+        }
+        .hero-subtitle {
+          font-family: "Work Sans", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 400;
 
+          font-size: 1.5rem!important;
+          font-style: normal;
         }
         .work-sans-title {
           font-family: "Work Sans", sans-serif;
           font-optical-sizing: auto;
           font-weight: 800;
+          font-style: normal;
+        }
+        .work-sans-subtitle {
+          font-family: "Work Sans", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 600;
           font-style: normal;
         }
         .work-sans-body {
@@ -54,99 +75,584 @@
             font-weight: 600;
             font-style: normal;
         }
-        .home{
-            background-color: #0e0e0e;
-        }
         .main-pic{
-            position: absolute;
-            bottom: 0;
-            left: 0;
+            
+        border: 3px solid white;
         }
-        .merriweather-light {
-  font-family: "Merriweather", serif;
-  font-weight: 300;
-  font-style: normal;
+        @media only screen and (max-width: 767px) {
+            .hero-img-container {
+                margin-top: 200px; /* Adjust the padding value as needed */
+            }
+        }
+.btn-main{
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+    border: 2px solid white;
+    transition: color 0.3s ease;
+}
+.btn-main:hover {
+    color: #b10a24!important;
+    border: 2px solid #b10a24;
+}
+.section-header{
+    margin-bottom: 50px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 3px solid white;
+}
+.section-header-title{
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    align-self: flex-end;
+    border-style: solid solid none;
+    border-width: 3px;
+    border-color: white;
+}
+.border-bottom{
+    border-bottom: 3px solid white!important;
+}
+.about-me .text-left{
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+.text-left b{
+    color: #f4c700!important;
+}
+.list-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.list-wrapper .custom-list{
+    padding: 0.3rem 1.2rem;
+    margin-bottom: .8rem;
+    margin-right: 1rem;
+    font-size: .8rem;
+    background: rgb(30 15 34 / 12%);
+    border-radius: 5px;
+    font-weight: 600;
+    color: white;
+}
+.border-container{
+    border: 3px solid white;
+}
+.hero-footer {
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Remove any margin */
 }
 
-.merriweather-light-italic {
-  font-family: "Merriweather", serif;
-  font-weight: 300;
-  font-style: italic;
-}
+.hero-footer .footer-container {
+    width: 100%; /* Set the width of the container */
+    height: 35px; /* Set the height of the container */
+    background-image: url('./assets/banner.png'); /* Specify the image URL */
+    background-repeat: repeat-x; /* Repeat the image horizontally */
+    background-size: 120px auto; /* Ensure the image size is not scaled */
+    background-position: 50px 0;
+  }
 
-.merriweather-regular {
-  font-family: "Merriweather", serif;
-  font-weight: 400;
-  font-style: normal;
+  .section{
+    padding: 5rem 4.5rem;
+  }
+  .about-me .subtitle{
+    font-weight: 400 !important;
+    font-size: 1.2rem;
+  }
+  .accordion-item{
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+  }
+  .accordion-button{
+    background-color: #b10a24;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  .accordion-button:not(.collapsed) {
+    background-color: #ff2d4e;
+    border-radius: 8px;
+    color: white;
+    box-shadow: none;
+  }
+  .accordion-collapse{
+    background-color: #b10a24;
+    border-radius: 5px;
+    color: white;
+  }
+  .accordion-button::after {
+    display: none;
 }
-
-.merriweather-regular-italic {
-  font-family: "Merriweather", serif;
-  font-weight: 400;
-  font-style: italic;
+    .hypertext::after{
+            content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 60%;
+    left: 0.25em;
+    right: 0.25em;
+    height: 0.5em;
+    background-color: #b10a24;
+    opacity: .75;
+    transition: opacity .2s ease,-webkit-transform .2s ease;
+    transition: transform .2s ease,opacity .2s ease;
+    transition: transform .2s ease,opacity .2s ease,-webkit-transform .2s ease;
+    }
+    .card{
+        border-radius: 20px;
+        background-color: #b10a24;
+        color: white;
+    }
+    @media (min-width: 992px){
+        .portfolio-item {
+            max-width: none;
+            margin: 0;
+        }
+        .portfolio-item .caption {
+            transition: background-color 0.7s, -webkit-clip-path 0.25s ease-out;
+            transition: clip-path 0.25s ease-out, background-color 0.7s;
+            transition: clip-path 0.25s ease-out, background-color 0.7s, -webkit-clip-path 0.25s ease-out;
+            -webkit-clip-path: inset(0px);
+            clip-path: inset(0px);
+        }
+        .portfolio-item .caption .caption-content {
+            transition: opacity 0.25s;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            margin-bottom: 5rem;
+        }
+        .portfolio-item img {
+            transition: -webkit-clip-path 0.25s ease-out;
+            transition: clip-path 0.25s ease-out;
+            transition: clip-path 0.25s ease-out, -webkit-clip-path 0.25s ease-out;
+            -webkit-clip-path: inset(-1px);
+            clip-path: inset(-1px);
+        }
+    }
+    
+.portfolio-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    max-width: 530px;
+    margin: auto auto 1rem;
 }
-
-.merriweather-bold {
-  font-family: "Merriweather", serif;
-  font-weight: 700;
-  font-style: normal;
+.portfolio-item .caption {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(33, 37, 41, 0.2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
 }
-
-.merriweather-bold-italic {
-  font-family: "Merriweather", serif;
-  font-weight: 700;
-  font-style: italic;
+.portfolio-item .caption .caption-content {
+    color: #fff;
+    margin: auto 2rem 2rem;
 }
-
-.merriweather-black {
-  font-family: "Merriweather", serif;
-  font-weight: 900;
-  font-style: normal;
+.portfolio-item .caption .caption-content h2, .portfolio-item .caption .caption-content .h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
-
-.merriweather-black-italic {
-  font-family: "Merriweather", serif;
-  font-weight: 900;
-  font-style: italic;
+.portfolio-item .caption .caption-content p {
+    font-weight: 400;
+    font-size: 1.2rem;
 }
-    </style>
+.portfolio-item img {
+    border-radius: 30px;
+}
+</style>
 </head>
 <body>
-    <header class="fixed-top d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 ">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between p-5 ">
       <a href="/" class="logo-brand px-3 d-flex align-items-center col-md-3 mb-2 mb-md-0 text-decoration-none">
-        <img src="./assets/logo-white.png" alt="lawrenzem" class="me-2"  height="60" role="img">
-        <span class="logo-title work-sans-title"> LAWRENZE<span class="logo-title-last">M</span></span>
+        <img src="./assets/logo-white.png" alt="lawrenzem" class="me-2"  height="50" role="img">
+        <span class="logo-title work-sans-title"> Lawrenze<span class="logo-title-last">m</span></span>
       </a>
 
       <ul class="nav header-nav col-12 col-md-auto mb-2 px-4 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-4 active">HOME</a></li>
-        <li><a href="#" class="nav-link px-4 ">ABOUT</a></li>
-        <li><a href="#" class="nav-link px-4 ">EXPERIENCE</a></li>
-        <li><a href="#" class="nav-link px-4 ">PROJECTS</a></li>
-        <li><a href="#" class="nav-link px-4 ">CONTACT</a></li>
+        <li><a href="#" class="nav-link px-4 "><button class="btn btn-main">Hire me</button></a></li>
       </ul>
     </header>
-    <div class="home vh-100">
-        <div class="row">
-            <div class="col-md-6 align-items-center justify-content-center">
-                 <img src="./assets/main.png" class="main-pic d-none d-md-block" alt="lawrenzem" class="me-2"  width="40%" role="img">
-            </div>
-            <div class="col-md-6">
+    <div class="main-panel">
+        <div class="hero pt-5">
+            <div class="hero-body pb-5">
                 <div class="container">
-                    <div class="row  align-items-center vh-100 px-3">
-                        <div class="col-md-12">
-                            <h1 class="work-sans-title">Hi, I'm <span class="logo-title-last">Lawrenze</span></h1>
-                            <h1 class="work-sans-title">I'm a <span class="logo-title-last">Web Developer</span></h1>
-                            <p class="work-sans-body">I'm a web developer based in the Philippines. I have a passion for web development and love to create for web and mobile devices.</p>
-                            <button class="btn btn-primary">Contact Me</button>
+                    <div class="row">
+                        <div class="col-12 d-flex flex-column align-items-center text-center">
+                            <h1 class="hero-title pt-3 pb-4" >Designer, Developer<span class="logo-title-last"> & </span>Innovator</h1>
+                            <p class="hero-subtitle ">I'm a web developer based in the Philippines. I have a passion for web development and love to create for web and mobile devices.</p>
+                            <div class="image-container pt-3">
+                                <img src="./assets/hero-img.png" alt="lawrenzem" width="250px" role="img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-footer pt-5">
+                <div class="footer-container">
+                </div>
+                <div class="footer-container">
+                </div>
+            </div>
+        </div>
+        
+        <div class="section about-me" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-column align-items-center text-center mb-4 pb-4">
+                        <h1 class="hero-title">Hello, I'm Lawrenze.</h1>
+                        <h1 class="hero-title">Welcome to my portfolio.</h1>
+                        <h4 class="hero-subtitle ">I'm a results-driven web developer with a 5-year track record specializing in
+PHP. Proven expertise in full-stack development, delivering scalable solutions.
+Adept at problem-solving and collaborative teamwork, dedicated to staying
+current with industry trends.</h4>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="hero-title p-2" style="font-size: 2rem!important;"> Tools I'm using</h3>
+                            </div>
+                          <div class="card-body" >
+                            <div class="list-wrapper px-3 pt-4">
+                                <div class="custom-list">Visual Studio</div>
+                                <div class="custom-list">Android Studio</div>
+                                <div class="custom-list">SQL Server Management Studio</div>
+                                <div class="custom-list">VS Code</div>
+                                <div class="custom-list">PHPStorm</div>
+                                <div class="custom-list">XAMPP</div>
+                                <div class="custom-list">Apache</div>
+                                <div class="custom-list">Gitlab</div>
+                                <div class="custom-list">Github</div>
+                                <div class="custom-list">StartInfinity</div>
+                                <div class="custom-list">Adobe Photoshop</div>
+                                <div class="custom-list">Adobe Illustrator</div>
+                                <div class="custom-list">PowerBI</div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3" >
+                        <div class="card" >
+                            <div class="card-header">
+                                <h3 class="hero-title p-2" style="font-size: 2rem!important;"> Languages</h3>
+                            </div>
+                          <div class="card-body">
+                            <div class="list-wrapper px-3 pt-4">
+                                <div class="custom-list">PHP</div>
+                                <div class="custom-list">C#</div>
+                                <div class="custom-list">C++</div>
+                                <div class="custom-list">Java</div>
+                                <div class="custom-list">Javascript</div>
+                                <div class="custom-list">Dart</div>
+                                <div class="custom-list">Python</div>
+                            </div>
+                          </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-     <div class="about vh-100">
-        
+        <div class="section experiences">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-column align-items-center text-center mb-4 pb-4">
+                        <h1 class="hero-title">Professional Experiences.</h1>
+                        <div class="accordion w-100 mt-5" id="accordionExample">
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Full-Stack Web Developer @ VipTutors.co  
+                                        <span class="ms-auto d-flex">Feb 2023 - Jan 2024     <span class="ms-4"><i class="fas fa-plus"></i></span></span>
+                                  </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse my-3 p-3" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <div class="job-header d-flex">
+                                                        <div class="location px-3">
+                                                            <i class="fas fa-map-marker-alt"></i> London, England
+                                                        </div>
+                                                        <div class="location ">
+                                                            <i class="fas fa-link "></i> <a class="text-white" href="https://viptutors.co">viptutors.co</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="image-container">
+                                                         <img class="mx-auto d-block" src="./assets/viptutors.png" alt="lawrenzem" role="img">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10 mt-3">
+                                                    <p class="text-start">Built various applications utilizing the CodeIgniter PHP framework, including speech recognition apps, video communication apps, and a writing exercise application. These projects involved the integration of AI APIs for tasks like image generation and chat functionalities. Additionally, I have experience in seamlessly integrating payment gateway APIs into these applications.</p>
+                                                </div>
+                                                <div class="col-12 mt-3">
+                                                    <div class="list-wrapper">
+                                                        <div class="custom-list">PHP</div>
+                                                        <div class="custom-list">Javascript</div>
+                                                        <div class="custom-list">JQuery</div>
+                                                        <div class="custom-list">Codeigniter</div>
+                                                        <div class="custom-list">Laravel</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Software QA Engineer @ Cognitif Inc.  
+                                        <span class="ms-auto d-flex">June 2021 - Dec 2022     <span class="ms-4"><i class="fas fa-plus"></i></span></span>
+                                  </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse my-3 p-3" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <div class="job-header d-flex">
+                                                        <div class="location px-3">
+                                                            <i class="fas fa-map-marker-alt"></i> Ortigas Center, Pasig City, Metro Manila
+                                                        </div>
+                                                        <div class="location ">
+                                                            <i class="fas fa-link "></i> <a class="text-white" href="https://https://www.cognitif.net/">cognitif.net</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="image-container">
+                                                         <img class="mx-auto d-block" src="./assets/cognitif.png" alt="lawrenzem" role="img">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10 mt-3">
+                                                    <p class="text-start">End-to-end test processes, overseeing planning, execution, and product release. Conducted thorough teammate test reviews, managed code deployment via Gitlab, and facilitated bug logging and resolution. Automated tests with Selenium and Xunit.
+                                                </div>
+                                                <div class="col-12 mt-3">
+                                                    <div class="list-wrapper">
+                                                        <div class="custom-list">Manual Testing</div>
+                                                        <div class="custom-list">Regression Testing</div>
+                                                        <div class="custom-list">Functional Testing</div>
+                                                        <div class="custom-list">Test Automation</div>
+                                                        <div class="custom-list">C#</div>
+                                                        <div class="custom-list">.NET</div>
+                                                        <div class="custom-list">Angular</div>
+                                                        <div class="custom-list">Selenium</div>
+                                                        <div class="custom-list">XUnit</div>
+                                                        <div class="custom-list">PowerBI</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Freelancing  
+                                        <span class="ms-auto d-flex">Nov 2018 - June 2021     <span class="ms-4"><i class="fas fa-plus"></i></span></span>
+                                  </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse my-3 p-3" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <div class="job-header d-flex">
+                                                        <div class="location px-3">
+                                                            <i class="fas fa-map-marker-alt"></i> Batangas city
+                                                        </div>
+                                                        <div class="location ">
+                                                            <i class="fas fa-link "></i> <a class="text-white" href="https://https://www.lawrenzem.me/">lawrenzem.me</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="image-container">
+                                                         <img class="mx-auto d-block" width="150" src="./assets/logo-white.png" alt="lawrenzem" role="img">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10 mt-3">
+                                                    <p class="text-start">Demonstrated proficiency in developing diverse systems and applications, including a Patient Management Information System on Android Studio, an e-commerce website utilizing Laravel with integrated APIs for communication and transactions, and a Dental Clinic System merging Laravel and CodeIgniter frameworks. Also showcased skill in mobile develpment creating a therapy appointment management app using Flutter, emphasizing intuitive user interface design.
+                                                </div>
+                                                <div class="col-12 mt-3">
+                                                    <div class="list-wrapper">
+                                                        <div class="custom-list">PHP</div>
+                                                        <div class="custom-list">Dart</div>
+                                                        <div class="custom-list">Python</div>
+                                                        <div class="custom-list">C#</div>
+                                                        <div class="custom-list">Javascript</div>
+                                                        <div class="custom-list">Java</div>
+                                                        <div class="custom-list">Bootstrap</div>
+                                                        <div class="custom-list">JQuery</div>
+                                                        <div class="custom-list">Kotlin</div>
+                                                        <div class="custom-list">Flutter</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Full-Stack Web Developer @ Wiflab  
+                                        <span class="ms-auto d-flex">Nov 2019 - Jan 2021     <span class="ms-4"><i class="fas fa-plus"></i></span></span>
+                                  </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse my-3 p-3" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <div class="job-header d-flex">
+                                                        <div class="location px-3">
+                                                            <i class="fas fa-map-marker-alt"></i> Batangas city
+                                                        </div>
+                                                        <div class="location ">
+                                                            <i class="fas fa-link "></i> <a class="text-white" href="https://https://www.wiflab.com//">https://wiflab.com</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="image-container">
+                                                         <img class="mx-auto d-block" width="150" src="./assets/wiflab.png" alt="lawrenzem" role="img">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10 mt-3">
+                                                    <p class="text-start">Conducted rigorous mobile compatibility testing for web applications, ensuring seamless functionality across different devices. Demonstrated proficiency in designing mockups for a diverse range of platforms, including e-commerce sites, payroll systems, and government portals. Enhanced reporting capabilities through autogenerated reports and developed efficient backend modules using a custom PHP framework and PostgreSQL.</p>
+                                                </div>
+                                                <div class="col-12 mt-3">
+                                                    <div class="list-wrapper">
+                                                        <div class="custom-list">PHP</div>
+                                                        <div class="custom-list">Jquery</div>
+                                                        <div class="custom-list">Javascript</div>
+                                                        <div class="custom-list">Bootstrap</div>
+                                                        <div class="custom-list">Node.js</div>
+                                                        <div class="custom-list">Mockup Design</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Graphic Designer @ Club Galaxy Boracay  
+                                        <span class="ms-auto d-flex">Nov 2018 - Nov 2019     <span class="ms-4"><i class="fas fa-plus"></i></span></span>
+                                  </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse my-3 p-3" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-12 mb-3">
+                                                    <div class="job-header d-flex">
+                                                        <div class="location px-3">
+                                                            <i class="fas fa-map-marker-alt"></i> Batangas city
+                                                        </div>
+                                                        <div class="location ">
+                                                            <i class="fas fa-link "></i> <a class="text-white" href="https://https://www.wiflab.com//">https://wiflab.com</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <div class="image-container">
+                                                         <img class="mx-auto d-block" width="150" src="./assets/galaxy.png" alt="lawrenzem" role="img">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-10 mt-3">
+                                                    <p class="text-start">Create captivating social media advertisements and promotional materials that resonate with our target audience while aligning with our brand identity and marketing objectives. Conceptualize and execute visually appealing designs for LED displays, tarps, and various platforms</p>
+                                                </div>
+                                                <div class="col-12 mt-3">
+                                                    <div class="list-wrapper">
+                                                        <div class="custom-list">Adobe Photoshop</div>
+                                                        <div class="custom-list">Adobe Illustrator</div>
+                                                        <div class="custom-list">Mockup Design</div>
+                                                        <div class="custom-list">Sony Vegas</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section projects">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-column align-items-center text-center mb-4 pb-4">
+                        <h1 class="hero-title">Projects.</h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Appoinment Booking Mobile App</div>
+                                    <p class="mb-0">Effortlessly schedule appointments on-the-go with our intuitive mobile app, simplifying your booking experience.</p>
+                                </div>
+                            </div>
+                            <div class="image-container">
+                                
+                                <img class="img-fluid w-100" src="./assets/therapy2.jpg" alt="...">
+                            </div>
+                        </a>
+                    </div>
+                     <div class="col-lg-6">
+                        <a class="portfolio-item">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Hardware Store Ecommerce Website</div>
+                                    <p class="mb-0">Build, repair, and create with ease - explore our online hardware store for all your DIY needs</p>
+                                </div>
+                            </div>
+                            <div class="image-container">
+                                
+                                <img class="img-fluid w-100" src="./assets/ordering.jpg" alt="...">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-12">
+                        <a class="portfolio-item">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Booking Web Application</div>
+                                    <p class="mb-0">Streamline your scheduling effortlessly with our intuitive booking web application, managing appointments with ease.</p>
+                                </div>
+                            </div>
+                            <div class="image-container">
+                                
+                                <img class="img-fluid w-100" src="./assets/website.jpg" alt="...">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Bootstrap JS bundle (required) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

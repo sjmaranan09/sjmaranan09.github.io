@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Barebones Template</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Your custom styles (if any) -->
+    <style>
+        body {
+            background-color: #1a1a1a!important;
+            color: white!important;
+            
+            font-family: "Work Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        header {
+            background-color: #1a1a1a!important;
+            border-bottom: 3px solid white;
+        }
+        .logo-title{
+            font-size: 1.5rem;
+            color: white!important;
+        }
+        .logo-title-last{
+            color: #f4c700!important;
+        }
+        .logo-title-last.imp{
+            border-bottom: 2px solid white;
+        }
+        .work-sans-title {
+          font-family: "Work Sans", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 800;
+          font-style: normal;
+        }
+        .work-sans-subtitle {
+          font-family: "Work Sans", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 600;
+          font-style: normal;
+        }
+        .work-sans-body {
+          font-family: "Work Sans", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 400;
+          font-style: normal;
+        }
+        header .nav .nav-link {
+            color: white!important;
+            font-family: "Work Sans", sans-serif;
+          font-optical-sizing: auto;
+            font-size: 1rem;
+            font-weight: 600;
+            font-style: normal;
+        }
+        .main-panel{
+            background-color: #0e0e0e;
+            border-bottom: 2px solid white;
+        }
+        .main-pic{
+            
+        border: 3px solid white;
+        }
+        @media only screen and (max-width: 767px) {
+            .hero-img-container {
+                margin-top: 200px; /* Adjust the padding value as needed */
+            }
+        }
+        .merriweather-light {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.merriweather-light-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.merriweather-regular {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.merriweather-regular-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.merriweather-bold {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.merriweather-bold-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.merriweather-black {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.merriweather-black-italic {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+.btn-main{
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    border: 3px solid white;
+    transition: color 0.3s ease;
+}
+.btn-main:hover {
+    color: #f4c700!important;
+    border: 3px solid #f4c700;
+}
+.section-header{
+    margin-bottom: 50px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 3px solid white;
+}
+.section-header-title{
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    align-self: flex-end;
+    border-style: solid solid none;
+    border-width: 3px;
+    border-color: white;
+}
+.border-bottom{
+    border-bottom: 3px solid white!important;
+}
+.about-me .text-left{
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+.text-left b{
+    color: #f4c700!important;
+}
+.list-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.list-wrapper .custom-list{
+    padding: 0.3rem 1.2rem;
+    margin-bottom: .8rem;
+    margin-right: 1rem;
+    font-size: .8rem;
+    background: rgb(200 255 158 / 12%);
+    border-radius: 5px;
+    font-weight: 600;
+    color: white;
+}
+.border-container{
+    border: 3px solid white;
+}
+</style>
+</head>
+<body>
+    <header class="fixed-top d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 ">
+      <a href="/" class="logo-brand px-3 d-flex align-items-center col-md-3 mb-2 mb-md-0 text-decoration-none">
+        <img src="./assets/logo-white.png" alt="lawrenzem" class="me-2"  height="60" role="img">
+        <span class="logo-title work-sans-title"> LAWRENZE<span class="logo-title-last">M</span></span>
+      </a>
+
+      <ul class="nav header-nav col-12 col-md-auto mb-2 px-4 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-4 active">HOME</a></li>
+        <li><a href="#" class="nav-link px-4 ">ABOUT</a></li>
+        <li><a href="#" class="nav-link px-4 ">EXPERIENCE</a></li>
+        <li><a href="#" class="nav-link px-4 ">PROJECTS</a></li>
+        <li><a href="#" class="nav-link px-4 ">CONTACT</a></li>
+      </ul>
+    </header>
+    <div class="main-panel mx-3">
+        <div class="home pb-5">
+            <div class="row vh-100">
+                <div class="col-md-6 d-flex align-items-center justify-content-center px-3">
+                    <div class="hero-img-container d-flex justify-content-center">
+                        <img src="./assets/main.png" class="main-pic" alt="lawrenzem" class="me-2"  width="50%" role="img">
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-center justify-content-center px-3">
+                    <div class="container">
+                        <div class="row  align-items-center px-3">
+                            <div class="col-md-12">
+                                <h1 class="work-sans-title">Hey there.</span></h1>
+                                <h1 class="work-sans-title">I'm <span class="logo-title-last imp">Mark Lawrenze.</span></h1>
+                                <p class="work-sans-body">I'm a web developer based in the Philippines. I have a passion for web development and love to create for web and mobile devices.</p>
+                                <button class="btn btn-main">Get to know me</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-me mx-5 pt-5" >
+            <div class="section-header d-flex">
+                <div class="section-header-title p-3 justify-content-start">About me</div>
+            </div>
+            <div class="section-body">
+                <div class="row px-4">
+                    <div class="col-12">
+                        <h5 class="work-sans-body text-center pb-5 pt-4">
+                            I'm Mark Lawrenze—curious, creative, and constantly evolving. Passionate about web development, I thrive on challenges that drive my growth. Let's explore together.
+                        </h5>
+                    </div>
+                    <div class="col-md-5">
+                       <div class="mb-3 border-container">
+                            <h3  class="work-sans-subtitle border-bottom p-2 mb-3">Get to know me</h3>
+                        <p class="text-left px-3 pt-4">
+                            I'm a results-driven <b>web developer</b> with a 5-year track record specializing in
+PHP. Proven expertise in <b>full-stack development</b>, delivering scalable solutions.
+Adept at problem-solving and collaborative teamwork, dedicated to staying
+current with industry trends.
+
+                        </p>
+                       </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class=" mb-3 border-container">
+                            <h3  class="work-sans-subtitle border-bottom p-2 mb-3">Tools I'm using</h3>
+                            <div class="list-wrapper px-3 pt-4">
+                                <div class="custom-list">Visual Studio</div>
+                                <div class="custom-list">Android Studio</div>
+                                <div class="custom-list">SQL Server Management Studio</div>
+                                <div class="custom-list">VS Code</div>
+                                <div class="custom-list">PHPStorm</div>
+                                <div class="custom-list">XAMPP</div>
+                                <div class="custom-list">Apache</div>
+                                <div class="custom-list">Gitlab</div>
+                                <div class="custom-list">Github</div>
+                                <div class="custom-list">StartInfinity</div>
+                                <div class="custom-list">Adobe Photoshop</div>
+                                <div class="custom-list">Adobe Illustrator</div>
+                                <div class="custom-list">PowerBI</div>
+                            </div>
+                        </div>
+                         <div class="border-container">
+                            <h3  class="work-sans-subtitle border-bottom p-2 mb-3">Languages</h3>
+                            <div class="list-wrapper px-3 pt-4">
+                                <div class="custom-list">PHP</div>
+                                <div class="custom-list">C#</div>
+                                <div class="custom-list">C++</div>
+                                <div class="custom-list">Java</div>
+                                <div class="custom-list">Javascript</div>
+                                <div class="custom-list">Dart</div>
+                                <div class="custom-list">Python</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="min-height: 300px;"></div>
+        </div>
+    </div>
+    <!-- Bootstrap JS bundle (required) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Your custom scripts (if any) -->
+    <script>
+        // Add your custom scripts here
+    </script>
+</body>
+</html>
